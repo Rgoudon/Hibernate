@@ -1,0 +1,20 @@
+ public static int userInput(){
+            Scanner scan =  new Scanner(System.in);
+            System.out.println("Entrez un id de scene.");
+            int id = -1;
+            try {
+                id = scan.nextInt();
+                return id;
+            }
+            catch(java.util.InputMismatchException ex){
+                System.out.println("Entrez un entier.");
+                return id;
+            }
+        }
+        
+        public static List<Truc> getTruc() {
+            CriteriaQuery<Truc> cQ = entityManager.getCriteriaBuilder().createQuery(Truc.class);
+            cQ.from(Truc.class)
+            return entityManager.createQuery(cQ).getResultsList();
+        }
+       
